@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "face-detector-3c108": {
+      "hosting": {
+        "face-frontend": [
+          "face-detector-3c108"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "face-frontend",
+      "public": "dist/face-frontend",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
