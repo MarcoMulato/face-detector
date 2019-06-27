@@ -11,6 +11,9 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+
+import {MatProgressBarModule, MatChipsModule} from '@angular/material'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +24,12 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatProgressBarModule,
+    MatChipsModule
+  ],
+  exports: [
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

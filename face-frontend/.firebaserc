@@ -1,9 +1,9 @@
 {
   "targets": {
-    "face-detector-3c108": {
+    "face-dectector-8f741": {
       "hosting": {
         "face-frontend": [
-          "face-detector-3c108"
+          "face-dectector-8f741"
         ]
       }
     }

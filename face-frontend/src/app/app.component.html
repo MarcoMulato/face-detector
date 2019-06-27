@@ -1,7 +1,36 @@
-<input type="file" (change)="uploadFile($event)" />
+<div class="container-fluid" style="padding: 50px">
+    <h1 style="color: azure; text-align: center">UTILIZACIÓN DE API GOOGLE VISIÓN</h1><br>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Subir</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" (change)="uploadFile($event)" >
+          <label class="custom-file-label" for="inputGroupFile01">{{ nombreSubida }} </label>
+        </div>
+    </div>
+    <div class="container" *ngIf="showPB">
+        <mat-progress-bar mode="indetermited" color="warn" [value]="uploadPercent | async"></mat-progress-bar>
+    </div>
 
-<div>upload {{ uploadPercent | async }}%</div>
+      <div style="padding: 20px" class="container" *ngIf="show">
+        <div class="row">
+          <div class="col">
+            <div class="text-center">
+                <img style="width:30pw;"  class="img-fluid" [src]="downloadURL | async" alt="">
+              </div>
+          </div>
+          <div class="col">
+                <h3 style="color: azure; text-align: center">Etiquetas de la imagen</h3><br>
+               <div style="align-content: center" class="d-flex justify-content-center">
+                    <mat-chip-list  *ngFor="let item of lista.labels">
+                            <mat-chip>{{ item }}</mat-chip>
+                        </mat-chip-list>
+               </div> 
 
-<img [src]="downloadURL | async" alt="">
+          </div>
+        </div>
+      </div>
+    <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
 
-<a [href]="downloadURL | async">{{ downloadURL | async }}</a>
+</div>

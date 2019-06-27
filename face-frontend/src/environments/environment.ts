@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
+    apiKey: "AIzaSyCPnzF2zcCxyhOLvfeidNnoh6vp6ZpdiTM",
+    authDomain: "face-dectector-8f741.firebaseapp.com",
+    databaseURL: "https://face-dectector-8f741.firebaseio.com",
+    projectId: "face-dectector-8f741",
+    storageBucket: "face-dectector-8f741.appspot.com",
+    messagingSenderId: "929057856071",
+    appId: "1:929057856071:web:59c6edb58edf6ea3"
   }
 };
 

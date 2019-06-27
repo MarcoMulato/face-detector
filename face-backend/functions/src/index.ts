@@ -10,7 +10,7 @@ const vision = require('@google-cloud/vision');
 const visionClient =  new vision.ImageAnnotatorClient();
 
 // Dedicated bucket for cloud function invocation
-const bucketName = 'face-detector-3c108.appspot.com';
+const bucketName = 'face-dectector-8f741.appspot.com';
 
 export const imageTrigger = functions.storage.bucket(bucketName).object().onFinalize(async (object) => {
     console.log(object);
@@ -24,7 +24,22 @@ export const imageTrigger = functions.storage.bucket(bucketName).object().onFina
     // Location of saved file in bucket
     const fileUrl = `gs://${bucketName}/${filePath}`;
 
-    const fileId = fileName.split('.jpg')[0];
+        let fileId;
+    if(fileName.includes('.jpg')){
+
+      fileId = fileName.split('.jpg')[0];
+    
+    }
+    else if (fileName.includes('.png')){
+
+      fileId = fileName.split('.png')[0];
+
+    }
+    else if(fileName.includes('.jpeg')){
+        
+      fileId = fileName.split('.jpeg')[0];
+
+    }
 
     const docRef  = admin.firestore().collection('photos').doc(fileId);
 
