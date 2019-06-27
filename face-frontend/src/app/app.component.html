@@ -1,6 +1,10 @@
-<div class="container-fluid" style="padding: 50px">
-    <h1 style="color: azure; text-align: center">UTILIZACIÓN DE API GOOGLE VISIÓN</h1><br>
-    <div class="input-group mb-3">
+<div class="container-fluid" style="padding: 30px">
+    <h2 style="color: azure; text-align: center">UTILIZACIÓN DE API GOOGLE VISIÓN</h2><br>
+    <div style="align-content: center" class="d-flex justify-content-center" ><video #video id="video" width="540" height="380" autoplay></video></div>
+    <br><div style="align-content: center" class="d-flex justify-content-center"><button class="btn btn-warning" id="snap" style="color: azure" (click)="capture()">Tome la foto</button></div>
+    <br>
+    <canvas #canvas id="canvas" width="640" height="480" style="display: none"></canvas>
+    <div style="padding-right: 150px; padding-left: 150px; margin-bottom:0px!important " class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupFileAddon01">Subir</span>
         </div>
